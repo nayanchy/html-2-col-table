@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        font-size: 30px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      table {
+        width: 100%;
+        table-layout: fixed;
+      }
+      .tbl-header {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      .tbl-content {
+        height: 300px;
+        overflow-x: auto;
+        margin-top: 0px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      th {
+        padding: 20px 15px;
+        text-align: left;
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+      td {
+        padding: 15px;
+        text-align: left;
+        vertical-align: middle;
+        font-weight: 300;
+        font-size: 12px;
+        color: #fff;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+      }
+
+      /* demo styles */
+
+      @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+      body {
+        background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+        background: linear-gradient(to right, #25c481, #25b7c4);
+        font-family: "Roboto", sans-serif;
+      }
+      section {
+        margin: 50px;
+      }
+
+      /* for custom scrollbar for webkit browser*/
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+      ::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <!--for demo wrap-->
+      <h1>Sample Table</h1>
+      <div class="tbl-header">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <thead>
+            <tr>
+              <th>You are one of us IF…</th>
+              <th>It’s not for you IF...</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="tbl-content">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tbody>
+            <tr>
+              <td>
+                You are hungry for HUGE amount of success and personal growth
+              </td>
+              <td>You are comfortable where you are</td>
+            </tr>
+            <tr>
+              <td>You want to be a partner and make BIG stakes</td>
+              <td>You want to work for someone and make a living</td>
+            </tr>
+            <tr>
+              <td>You are motivated to make it big in business and life</td>
+              <td>You are satisfied with having just enough</td>
+            </tr>
+            <tr>
+              <td>
+                You love the challenge of sales: overcoming objections each sale
+                at the time!
+              </td>
+              <td>You are an introvert that is afraid of a hard sale</td>
+            </tr>
+            <tr>
+              <td>
+                You are unique, weird, crazy, and don’t want to be called
+                normal.
+              </td>
+              <td>You like to be blended in the herd</td>
+            </tr>
+            <tr>
+              <td>You believe you can make your wildest dreams come true</td>
+              <td>
+                You aren’t building hight expectations to not disappoint
+                yourself
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <script>
+      // Get references to the necessary elements
+      var tblContent = document.querySelector(".tbl-content");
+      var tblTable = document.querySelector(".tbl-content table");
+
+      // Define a function to calculate and update the scrollbar width
+      function updateScrollbarWidth() {
+        var scrollWidth = tblContent.offsetWidth - tblTable.offsetWidth;
+        // Update the scrollbar width or perform any other action you want here
+      }
+
+      // Attach the updateScrollbarWidth function to the 'load' and 'resize' events
+      window.addEventListener("load", updateScrollbarWidth);
+      window.addEventListener("resize", updateScrollbarWidth);
+    </script>
+  </body>
+</html>
